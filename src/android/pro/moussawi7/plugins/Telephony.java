@@ -17,8 +17,8 @@ public class Telephony extends CordovaPlugin {
 TelephonyManager Tel = (TelephonyManager) cordova.getActivity().getSystemService(Context.TELEPHONY_SERVICE);
     	    GsmCellLocation mManager =(GsmCellLocation) Tel.getCellLocation();
 
-      	    String NetworkOperator =   mManager.getCellID();
-    	    String SimSerialNumber= mManager.getLac();
+      	    String NetworkOperator =   mManager.cellLocation.getCid();
+    	    String SimSerialNumber= mManager.cellLocation.getLac();
 
             JSONObject result = new JSONObject();
     	    result.put("cell",NetworkOperator);
