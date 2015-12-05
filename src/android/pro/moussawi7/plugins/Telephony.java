@@ -18,16 +18,12 @@ TelephonyManager Tel = (TelephonyManager) cordova.getActivity().getSystemService
     	    GsmCellLocation mManager =(GsmCellLocation) Tel.getCellLocation();
 
       	    String NetworkOperator =   mManager.getCellID();
-    	    String PhoneNumber =   mManager.getCellID();
     	    String SimSerialNumber= mManager.getLac();
-    	    String NetworkCountry=mManager.getLac();
-    	    
+
             JSONObject result = new JSONObject();
     	    result.put("cell",NetworkOperator);
-    	    result.put("cell2",PhoneNumber);
     	    result.put("lac",SimSerialNumber);
-    	    result.put("lac2",NetworkCountry);
-    	    
+
             callbackContext.success(result);
        return true;
     } catch (Exception e) {
