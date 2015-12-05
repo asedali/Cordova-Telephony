@@ -2,7 +2,7 @@ function Telephony() {
 }
 Telephony.prototype = {
   getInfo: function (successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, "Telephony", "", []);
+    cordova.exec(successCallback, errorCallback, "Telephony", "getSignalInfo", []);
   }
 };
 Telephony.install = function () {
