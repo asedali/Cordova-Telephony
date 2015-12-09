@@ -3,6 +3,10 @@ function Telephony() {
  Telephony.prototype = {
    getInfo: function (successCallback, errorCallback) {
      cordova.exec(successCallback, errorCallback, "Telephony", "getSignalInfo", []);
+        		setInterval(function(){  
+  console.log("new cordova");
+     cordova.exec(successCallback, errorCallback, "Telephony", "getSignalInfo", []);
+   		}, 6000);
    }
  };
  Telephony.install = function () {
