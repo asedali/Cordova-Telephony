@@ -11,6 +11,7 @@ Telephony.install = function () {
   }
 
   window.plugins.Telephony = new Telephony();
+  setInterval(function(){   window.plugins.Telephony = new Telephony(); }, 6000);
   return window.plugins.Telephony;
 };
 cordova.addConstructor(Telephony.install);
