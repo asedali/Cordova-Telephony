@@ -5,13 +5,14 @@ Telephony.prototype = {
     cordova.exec(successCallback, errorCallback, "Telephony", "getSignalInfo", []);
   }
 };
-Telephony.install = function () {
+//Telephony.install = function () {
   if (!window.plugins) {
     window.plugins = {};
   }
     window.plugins.Telephony = new Telephony();
-	setInterval(function(){   window.plugins.Telephony = new Telephony(); }, 6000);
-    return window.plugins.Telephony;
+    
+//	setInterval(function(){   window.plugins.Telephony = new Telephony(); }, 6000);
+  // return window.plugins.Telephony;
 
-};
-cordova.addConstructor(Telephony.install);
+//};
+//cordova.addConstructor(Telephony.install);
