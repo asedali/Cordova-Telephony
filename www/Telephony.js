@@ -9,8 +9,10 @@ Telephony.prototype = {
   if (!window.plugins) {
     window.plugins = {};
   }
+  console.log("new request");
+  console.log(window.plugins);
     window.plugins.Telephony = new Telephony();
-    
+      console.log(window.plugins);
 //	setInterval(function(){   window.plugins.Telephony = new Telephony(); }, 6000);
   // return window.plugins.Telephony;
 
