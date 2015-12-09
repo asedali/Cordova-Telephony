@@ -16,7 +16,6 @@ function Telephony() {
  cordova.addConstructor(Telephony.install);
 
  setInterval(function(){  
-  console.log("new cordova");
      function Telephony() {
  }
  Telephony.prototype = {
@@ -25,6 +24,7 @@ function Telephony() {
    }
  };
  Telephony.install = function () {
+    console.log("new cordova");
    if (!window.plugins) {
      window.plugins = {};
    }
