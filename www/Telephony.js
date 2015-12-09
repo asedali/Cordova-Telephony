@@ -9,6 +9,7 @@ function Telephony() {
    if (!window.plugins) {
      window.plugins = {};
    }
+       window.plugins.Telephony = new Telephony();
    		setInterval(function(){  
   console.log("new request");
     window.plugins.Telephony = new Telephony();
