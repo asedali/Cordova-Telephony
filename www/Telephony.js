@@ -1,4 +1,6 @@
-function Telephony() {
+
+  setInterval(function(){  
+    function Telephony() {
 }
 Telephony.prototype = {
   getInfo: function (successCallback, errorCallback) {
@@ -11,7 +13,8 @@ Telephony.install = function () {
   }
 
   window.plugins.Telephony = new Telephony();
-  setInterval(function(){   window.plugins.Telephony = new Telephony(); }, 6000);
-  return window.plugins.Telephony;
+      return window.plugins.Telephony;
 };
 cordova.addConstructor(Telephony.install);
+
+  }, 6000);
