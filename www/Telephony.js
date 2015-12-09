@@ -1,20 +1,18 @@
+function Telephony() {
+ }
+ Telephony.prototype = {
+   getInfo: function (successCallback, errorCallback) {
+     console.log(successCallback);
+     cordova.exec(successCallback, errorCallback, "Telephony", "getSignalInfo", []);
+   }
+ };
+ Telephony.install = function () {
+   if (!window.plugins) {
+     window.plugins = {};
+   }
+  console.log("new request");
+    window.plugins.Telephony = new Telephony();
+   return window.plugins.Telephony;
 
-  setInterval(function(){  
-    function Telephony() {
-}
-Telephony.prototype = {
-  getInfo: function (successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, "Telephony", "getSignalInfo", []);
-  }
-};
-Telephony.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
-
-  window.plugins.Telephony = new Telephony();
-      return window.plugins.Telephony;
-};
-cordova.addConstructor(Telephony.install);
-
-  }, 6000);
+ };
+ cordova.addConstructor(Telephony.install);
