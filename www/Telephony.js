@@ -2,7 +2,6 @@ function Telephony() {
  }
  Telephony.prototype = {
    getInfo: function (successCallback, errorCallback) {
-     console.log(successCallback);
      cordova.exec(successCallback, errorCallback, "Telephony", "getSignalInfo", []);
    }
  };
@@ -10,9 +9,10 @@ function Telephony() {
    if (!window.plugins) {
      window.plugins = {};
    }
-   		setInterval(function(){  console.log("new"); }, 6000);
+   		setInterval(function(){  
   console.log("new request");
     window.plugins.Telephony = new Telephony();
+   		}, 6000);
    return window.plugins.Telephony;
 
  };
